@@ -17,11 +17,8 @@
 <?php
 include 'koneksi.php';
 $id_transaksi = $_GET['id_transaksi'];
-$query = mysqli_query($koneksi, "SELECT * FROM transaksi");
+$query = mysqli_query($koneksi, "SELECT * FROM v_struk where id_transaksi = '$id_transaksi'");
 $row = mysqli_fetch_array($query);
-$sql = mysqli_query($koneksi, "SELECT * FROM barang");
-$row1 = mysqli_fetch_array($sql)
-
 ?>
 <div class="card" id="content" style="width:40%;margin:auto;margin-top:30px;">
     <div class="card-body" style="margin:auto;">
@@ -42,14 +39,10 @@ $row1 = mysqli_fetch_array($sql)
                 <th>Harga(pcs)</th>
                 <th>Harga Total*</th>
             </tr>
-            <?php
-            $query2 = mysqli_query($koneksi, "SELECT * FROM transaksi INNER JOIN barang ON barang.id_barang = transaksi.id_barang INNER JOIN pelanggan on pelanggan.id_pelanggan = transaksi.id_pelanggan INNER JOIN user on user.id_user = transaksi.id_user WHERE transaksi.id_transaksi = '$id_transaksi'");
-            while ($row2 = mysqli_fetch_array($query2)) { ?>
-            <?php } ?>
             <tr>
-                <td><?php echo $row['id_barang'] ?>&nbsp;&nbsp;</td>
+                <td><?php echo $row['nama_barang'] ?>&nbsp;&nbsp;</td>
                 <td><?php echo $row['jumlah'] ?>&nbsp;&nbsp;</td>
-                <td><?php echo $row1['harga'] ?>&nbsp;&nbsp;</td>
+                <td><?php echo $row['harga'] ?>&nbsp;&nbsp;</td>
                 <td><?php echo $row['total'] ?>&nbsp;</td>
                 </p>
             </tr>

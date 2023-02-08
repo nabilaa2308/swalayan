@@ -134,10 +134,10 @@
                         <td><?php echo $data['total'] ?></td>
                         <td><?php echo $data['id_user'] ?></td>
                         <td>
+                            <a href="admin.php?page=cetak&id_transaksi=<?php echo $data['id_transaksi'] ?>" class="btn btn-primary">Cetak</a>
                             <a href="proses/proses_transaksi.php?aksi=delete&id_transaksi=<?php echo $data['id_transaksi'] ?>" class="btn btn-danger">Hapus</a>
                         </td>
                     </tr>
-
                 <?php } ?>
             </tbody>
         </table>

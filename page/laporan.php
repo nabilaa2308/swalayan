@@ -29,7 +29,6 @@
                     <td>Barang</td>
                     <td>Jumlah</td>
                     <td>Total</td>
-                    <td>Aksi</td>
                 </tr>
             </thead>
             <tbody>
@@ -50,7 +49,6 @@
                         <td><?php echo $data['nama_barang'] ?></td>
                         <td><?php echo $data['jumlah'] ?></td>
                         <td><?php echo $data['total'] ?></td>
-                        <td><a href="admin.php?page=cetak&id_transaksi=<?php echo $data['id_transaksi'] ?>" class="btn btn-primary">Cetak</a></td>
                     </tr>
                 <?php } ?>
             </tbody>

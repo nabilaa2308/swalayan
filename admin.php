@@ -141,47 +141,115 @@ if ($_SESSION['status'] != "login") {
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="admin.php" class="nav-link">
+                                    <a <?php
+                                        if (isset($_GET['page'])) {
+                                            $page = $_GET['page'];
+                                            switch ($page) {
+                                                case 'dashboard':
+
+                                                    echo 'class="nav-link active"';
+                                            }
+                                        }
+
+                                        ?> href="admin.php?page=dashboard" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Dashboard</p>
+                                        <p>
+                                            Dashboard
+                                        </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admin.php?page=user" class="nav-link">
+                                    <a <?php
+                                        if (isset($_GET['page'])) {
+                                            $page = $_GET['page'];
+                                            switch ($page) {
+                                                case 'user':
+
+                                                    echo 'class="nav-link active"';
+                                            }
+                                        }
+
+                                        ?> href="admin.php?page=user" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>User</p>
+                                        <p>
+                                            User
+                                        </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admin.php?page=pelanggan" class="nav-link">
+                                    <a <?php
+                                        if (isset($_GET['page'])) {
+                                            $page = $_GET['page'];
+                                            switch ($page) {
+                                                case 'pelanggan':
+
+                                                    echo 'class="nav-link active"';
+                                            }
+                                        }
+
+                                        ?> href="admin.php?page=pelanggan" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Pelanggan</p>
+                                        <p>
+                                            Pelanggan
+                                        </p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admin.php?page=barang" class="nav-link">
+                                    <a <?php
+                                        if (isset($_GET['page'])) {
+                                            $page = $_GET['page'];
+                                            switch ($page) {
+                                                case 'barang':
+
+                                                    echo 'class="nav-link active"';
+                                            }
+                                        }
+
+                                        ?> href="admin.php?page=barang" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Barang</p>
+                                        <p>
+                                            Barang
+                                        </p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="admin.php?page=transaksi" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Transaksi
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="admin.php?page=laporan" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Laporan
-                                </p>
-                            </a>
-                        </li>
+                                    <a <?php
+                                        if (isset($_GET['page'])) {
+                                            $page = $_GET['page'];
+                                            switch ($page) {
+                                                case 'transaksi':
+
+                                                    echo 'class="nav-link active"';
+                                            }
+                                        }
+
+                                        ?> href="admin.php?page=transaksi" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Transaksi
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a <?php
+                                        if (isset($_GET['page'])) {
+                                            $page = $_GET['page'];
+                                            switch ($page) {
+                                                case 'laporan':
+
+                                                    echo 'class="nav-link active"';
+                                            }
+                                        }
+
+                                        ?> href="admin.php?page=laporan" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Laporan
+                                        </p>
+                                    </a>
+                                </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -250,6 +318,9 @@ if ($_SESSION['status'] != "login") {
                                     break;
                                 case 'cetak':
                                     include 'page/cetak.php';
+                                    break;
+                                case 'dashboard':
+                                    include 'page/dashboard.php';
                                     break;
                             }
                             ?>
