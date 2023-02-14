@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <a href="admin.php?page=user" class="btn btn-default">Back</a>
+                <a href="admin.php?page=user" class="btn btn-warning">Back</a>
                 <button type="submit" class="btn btn-info float-right">Update</button>
             </div>
         </div>

@@ -18,7 +18,7 @@ if ($cek > 0) {
     $_SESSION['id_user'] = $data['id_user'];
     $_SESSION['username'] = $username;
     $_SESSION['status'] = "login";
-    header("location:admin.php");
+    header("location:admin.php?page=dashboard");
 } else {
     header("location:index.php?pesan=gagal");
 }

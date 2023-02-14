@@ -62,7 +62,7 @@
                 <!-- /.card-body -->
                 <div class="card-footer">
                     <button type="submit" class="btn btn-info">Simpan</button>
-                    <button class="btn btn-default float-right">Cancel</button>
+                    <button class="btn btn-warning float-right">Cancel</button>
                 </div>
                 <!-- /.card-footer -->
             </form>
@@ -73,7 +73,7 @@
             </div>
 
             <div class="card-body">
-                <table id="example1" class="table table-bordered table-stripped">
+            <table class="table table-striped">
 
                     <thead>
                         <tr>
@@ -108,6 +108,5 @@
 
             </div>
 
-        </div>
         </div>
         <!-- /.form-box -->

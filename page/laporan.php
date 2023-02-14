@@ -24,6 +24,7 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
+                    <td>No</td>
                     <td>ID Transaksi</td>
                     <td>Tanggal</td>
                     <td>Barang</td>
@@ -33,6 +34,7 @@
             </thead>
             <tbody>
                 <?php
+                $no=1;
                 include 'koneksi.php';
                 if (isset($_POST["tampilkan"])) {
                     $tanggal_awal = $_POST['tanggal_awal'];
@@ -44,6 +46,7 @@
                 while ($data = mysqli_fetch_array($query)) {
                 ?>
                     <tr>
+                        <td><?php echo $no++ ?></td>
                         <td><?php echo $data['id_transaksi'] ?></td>
                         <td><?php echo $data['tanggal'] ?></td>
                         <td><?php echo $data['nama_barang'] ?></td>

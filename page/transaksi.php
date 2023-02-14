@@ -91,7 +91,7 @@
         <!-- /.card-body -->
         <div class="card-footer">
             <button type="submit" class="btn btn-info">Simpan</button>
-            <button class="btn btn-default float-right">Cancel</button>
+            <button class="btn btn-warning float-right">Cancel</button>
         </div>
         <!-- /.card-footer -->
     </form>
@@ -102,7 +102,7 @@
     </div>
 
     <div class="card-body">
-        <table id="example1" class="table table-bordered table-stripped">
+    <table class="table table-striped">
 
             <thead>
                 <tr>
@@ -134,7 +134,7 @@
                         <td><?php echo $data['total'] ?></td>
                         <td><?php echo $data['id_user'] ?></td>
                         <td>
-                            <a href="admin.php?page=cetak&id_transaksi=<?php echo $data['id_transaksi'] ?>" class="btn btn-primary">Cetak</a>
+                            <a href="page/cetak.php?id_transaksi=<?php echo $data['id_transaksi'] ?>" class="btn btn-primary">Cetak</a>
                             <a href="proses/proses_transaksi.php?aksi=delete&id_transaksi=<?php echo $data['id_transaksi'] ?>" class="btn btn-danger">Hapus</a>
                         </td>
                     </tr>
@@ -144,7 +144,6 @@
 
     </div>
 
-</div>
 </div>
 <!-- /.form-box -->
 <script>

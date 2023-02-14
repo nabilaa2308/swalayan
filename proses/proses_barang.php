@@ -33,7 +33,11 @@ switch($aksi){
     break;
   case 'delete':
     $id_barang = $_GET['id_barang'];
-    $query = mysqli_query($koneksi,"DELETE FROM barang WHERE id_barang = '$id_barang'");
+    $querygambar = mysqli_query($koneksi, "SELECT gambar FROM barang WHERE id_barang = '$id_barang'");
+    $data = mysqli_fetch_array($querygambar);
+    $image = $data['gambar'];
+    unlink("../gambar/" . $image);
+    $query = mysqli_query($koneksi, "DELETE FROM barang WHERE id_barang = '$id_barang'");
     header("location:../admin.php?page=barang");
     break;
     }
